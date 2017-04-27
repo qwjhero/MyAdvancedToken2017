@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyAdvancedToken DApp</title>
+  <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .section {
+      margin: 20px;
+    }
+    button {
+      padding: 5px 16px;
+      border-radius: 4px;
+    }
+    button#transfer { background-color: yellow; }
+    button#buyTicket { background-color: #98fb98; }
+    button#refundTicket { background-color: pink; }
+    button#createWallet { background-color: #add8e6; }
+    #seed {color: green;}
+
+  </style>
+  <script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <h1>MyAdvancedToken DApp</h1>
+  <div class="section">
+    Contract deployed at: <div id="confAddress"></div>
+  </div>
+
+  <div class="section">
+    Owner: <div  id="confOrganizer"></div>
+  </div>
+  
+  <hr/>
+  
+  <h2>Send Coin</h2>
+  <div class="section">
+    From: <input type="text" id="transfer_from" />
+    To:   <input type="text" id="transfer_to" />
+    Value:	 <input type="text" id="transfer_value" />
+      <button id="transfer">Send Coin</button>
+      <span id="transferResult"></span>
+  </div>
+ 
+  <hr/>
+  
+  <h2>Freeze Account</h2>
+  <div class="section">
+    Account: <input type="text" id="freezeAccount_target" />
+    Freeze_status:   <input type="text" id="freezeAccount_freeze" /> 
+ <!--    <fieldset>
+    <legend>Freeze_status:</legend>
+        <input type="radio" value="Freeze" id="freezeAccount_freeze" name="freeze">
+        Freeze
+        <br/>
+        <input type="radio" value="UnFreeze" id="freezeAccount_freeze" name="freeze" checked>
+        UnFreeze
+    </fieldset>  
+  -->    
+    Owner:	 <input type="text" id="freezeAccount_owner" />
+      <button id="freezeAccount">Freeze Account</button>
+      <span id="freezeAccountResult"></span>
+  
+   <hr/>
+  <div class="section">
+  	<h2>MintToken</h2>
+  </div> 
+    Account: <input type="text" id="mintToken_target" />
+    Value:   <input type="text" id="mintToken_mintedAmount" />
+    Owner:	 <input type="text" id="mintToken_owner" />
+      <button id="mintToken">mintToken</button>  	
+  	<span id="mintTokenResult"></span>
+  </div>   
+
+   <hr/>
+  
+  <div class="section">
+  	<h2>Lookup Accounts</h2>
+  	Coins: <span id="coins_owned"></span>
+    <br/>
+  	Freeze_status:  <span id="freeze_status"></span>
+  	<br/>
+  	totalSupply: <span id="totalSupply"> </span>
+  	<br/>
+  	Lookup Address:<input type="text" id="Address_lookup" />
+  	<button id="lookup">Lookup</button>
+  	<span id="lookupResult"></span>
+  </div>
+  
+ <!--
+  <div class="section">
+    Registrants: <span id="numRegistrants">0</span>
+  </div>
+
+  <hr/>
+  
+  <div class="section">
+    <h2>Buy a Ticket</h2>
+    Ticket Price: <input type="text" id="ticketPrice" value="0.05" /> 
+      Buyer Address: <input type="text" id="buyerAddress" />
+      <button id="buyTicket">Buy Ticket</button>
+      <span id="buyTicketResult"></span>
+  </div>
+
+  <hr/>
+
+  <div class="section">
+    <h2>Refund a Ticket</h2>
+    Ticket Price: <input type="text" id="ticketPrice" value="0.05" /> 
+      Buyer Address: <input type="text" id="refBuyerAddress" />
+      <button id="refundTicket">Refund Ticket</button>
+      <span id="refundTicketResult"></span>
+  </div>
+
+  <hr/>
+  
+  <div class="section">
+    <h2>Create a Wallet</h2>
+    Password: <input type="text" id="password" />
+      <button id="createWallet">Create Wallet</button>
+      <button id="fundWallet">Fund Wallet with 1 ETH</button> 
+
+      <br/><br/>
+      Your Wallet Secret Seed: <span id="seed"></span>
+      <br/><br/>
+      Your New Wallet Address: <span id="wallet"></span>
+      <br/><br/>
+      Your New Wallet Private Key: <span id="privateKey"></span>
+      <br/><br/>
+      Wallet Balance: <span id="balance"></span>
+      <br/><br/>
+      <button id="checkBalance">Check Balance</button> 
+  </div>
+-->
+</body>
+</html> 
